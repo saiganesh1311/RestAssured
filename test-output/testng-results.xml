@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-05T23:38:44 IST" name="Default suite" finished-at="2025-05-05T23:38:47 IST" duration-ms="2385">
+    <groups>
+    </groups>
+    <test started-at="2025-05-05T23:38:44 IST" name="Default test" finished-at="2025-05-05T23:38:47 IST" duration-ms="2385">
+      <class name="practise.SumValidation">
+        <test-method signature="sum()[pri:0, instance:practise.SumValidation@741a8937]" started-at="2025-05-05T23:38:44 IST" name="sum" finished-at="2025-05-05T23:38:47 IST" duration-ms="2282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sum -->
+      </class> <!-- practise.SumValidation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
