@@ -4,6 +4,10 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import static org.hamcrest.Matchers.*;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 import org.testng.Assert;
 
 import static io.restassured.RestAssured.*;
@@ -13,13 +17,13 @@ import files.ReusableCode;
 
 public class Basics {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
 		//Creating a place
 		RestAssured.baseURI= "https://rahulshettyacademy.com";
 		String response=given().log().all().queryParam("key","qaclick123").header("Content-Type","application/json")
-		.body(Payload.AddPlace()).when().post("/maps/api/place/add/json")
+		.body(new String(Files.readAllBytes(Paths.get("C:\\Users\\K.Sai Ganesh\\eclipse-workspace\\RestAssured\\src\\test\\java\\files\\addPlace.json")))).when().post("/maps/api/place/add/json")
 		.then().assertThat().statusCode(200).extract().response().asString();
 		
 		JsonPath js= ReusableCode.jsonToRaw(response);
