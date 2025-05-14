@@ -25,5 +25,6 @@ public class SumValidation {
 		Assert.assertEquals(sum, PurchaseAmount);
 	}
 	
+	
 
 }
