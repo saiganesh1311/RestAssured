@@ -36,7 +36,7 @@ public class EcommerceAPI {
 	
 	//Add product
 	
-	RequestSpecification addProdBaseReq= new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
+	RequestSpecification addProdBaseReq= new RequestSpecBuilder().setRelaxedHTTPSValidation().setBaseUri("https://rahulshettyacademy.com")
 			.addHeader("authorization",token)
             .build();
 	RequestSpecification addProdReq = given().log().all().spec(addProdBaseReq).param("productName", "Laptop")
