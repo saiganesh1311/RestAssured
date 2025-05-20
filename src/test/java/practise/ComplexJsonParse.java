@@ -57,6 +57,7 @@ public class ComplexJsonParse {
 		int PurchaseAmount=js.getInt("dashboard.purchaseAmount");
 		
 		Assert.assertEquals(sum, PurchaseAmount);
+		System.out.println("hello there");
 		
 
 	}
